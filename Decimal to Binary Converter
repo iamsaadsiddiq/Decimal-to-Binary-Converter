@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+void BinaryCalculation(int num)
+{
+    int arr[10];
+    int count = 0;
+    int binary = 0;
+
+    for (int i = 0; num != 0; i++)
+    {
+        binary = num % 2;
+        arr[i] = binary;
+        num /= 2;
+        count++;
+    }
+
+    cout << "The number converted from decimal system to binary is: ";
+    for (int i = count - 1; i >= 0; i--)
+    {
+        cout << arr[i];
+    }
+}
+
+int main()
+{
+    int num;
+    cout << "Enter the number in Decimal Number System: ";
+    cin >> num;
+
+    // Calling Function
+    BinaryCalculation(num);
+
+    return 0;
+}
