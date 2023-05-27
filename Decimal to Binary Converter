@@ -7,18 +7,20 @@ void BinaryCalculation(int num)
     int count = 0;
     int binary = 0;
 
+    // Convert decimal number to binary
     for (int i = 0; num != 0; i++)
     {
-        binary = num % 2;
-        arr[i] = binary;
-        num /= 2;
-        count++;
+        binary = num % 2;  // Get the remainder when dividing by 2
+        arr[i] = binary;  // Store the binary digit in an array
+        num /= 2;  // Update num by dividing it by 2
+        count++;  // Keep track of the number of binary digits
     }
 
+    // Print the binary representation
     cout << "The number converted from decimal system to binary is: ";
     for (int i = count - 1; i >= 0; i--)
     {
-        cout << arr[i];
+        cout << arr[i];  // Print each binary digit in reverse order
     }
 }
 
